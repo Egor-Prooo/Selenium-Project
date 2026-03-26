@@ -12,7 +12,7 @@ namespace EcommerceTests.Infrastructure.Pages
         // ── Locators ────────────────────────────────────────────────────────────
         private readonly By _emailInput         = By.XPath("//input[@id='Email']");
         private readonly By _passwordInput      = By.XPath("//input[@id='Password']");
-        private readonly By _loginButton        = By.XPath("//button[@class='button-1 login-button']");
+        private readonly By _loginButton        = By.XPath("//button[contains(@class,'login-button')]");
         private readonly By _errorMessage       = By.XPath("//div[contains(@class,'message-error')]//li");
         private readonly By _validationSummary  = By.XPath("//div[@class='validation-summary-errors']");
         private readonly By _forgotPasswordLink = By.XPath("//a[contains(@href,'passwordrecovery')]");

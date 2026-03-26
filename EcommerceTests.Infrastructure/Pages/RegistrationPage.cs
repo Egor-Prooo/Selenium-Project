@@ -13,8 +13,8 @@ namespace EcommerceTests.Infrastructure.Pages
         private readonly By _firstNameInput      = By.XPath("//input[@id='FirstName']");
         private readonly By _lastNameInput       = By.XPath("//input[@id='LastName']");
         private readonly By _emailInput          = By.XPath("//input[@id='Email']");
-        private readonly By _companyCheckbox     = By.XPath("//input[@id='Company']");
-        private readonly By _companyNameInput    = By.XPath("//input[@id='Company']");
+        private readonly By _companyCheckbox = By.XPath("//input[@id='IsCompany']");
+        private readonly By _companyNameInput = By.XPath("//input[@id='Company']");
         private readonly By _passwordInput       = By.XPath("//input[@id='Password']");
         private readonly By _confirmPasswordInput= By.XPath("//input[@id='ConfirmPassword']");
         private readonly By _registerButton      = By.XPath("//button[@id='register-button']");
@@ -46,6 +46,19 @@ namespace EcommerceTests.Infrastructure.Pages
 
             Driver.FindElement(_emailInput).Clear();
             Driver.FindElement(_emailInput).SendKeys(dto.Email);
+
+            var companyCheckboxEls = Driver.FindElements(_companyCheckbox);
+            if (companyCheckboxEls.Count > 0)
+            {
+                bool isChecked = companyCheckboxEls[0].Selected;
+                if (dto.IsCompany && !isChecked) JsClick(companyCheckboxEls[0]);
+
+                if (dto.IsCompany && !string.IsNullOrEmpty(dto.CompanyName))
+                {
+                    var nameField = Driver.FindElements(_companyNameInput);
+                    if (nameField.Count > 0) { nameField[0].Clear(); nameField[0].SendKeys(dto.CompanyName); }
+                }
+            }
 
             Driver.FindElement(_passwordInput).Clear();
             Driver.FindElement(_passwordInput).SendKeys(dto.Password);

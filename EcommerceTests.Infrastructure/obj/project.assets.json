@@ -401,11 +401,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\epros\\source\\repos\\SeleniumProject\\SeleniumProject\\EcommerceTests.Infrastructure\\EcommerceTests.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\epros\\source\\repos\\SeleniumProject\\EcommerceTests.Infrastructure\\EcommerceTests.Infrastructure.csproj",
       "projectName": "EcommerceTests.Infrastructure",
-      "projectPath": "C:\\Users\\epros\\source\\repos\\SeleniumProject\\SeleniumProject\\EcommerceTests.Infrastructure\\EcommerceTests.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\epros\\source\\repos\\SeleniumProject\\EcommerceTests.Infrastructure\\EcommerceTests.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\epros\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\epros\\source\\repos\\SeleniumProject\\SeleniumProject\\EcommerceTests.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\epros\\source\\repos\\SeleniumProject\\EcommerceTests.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

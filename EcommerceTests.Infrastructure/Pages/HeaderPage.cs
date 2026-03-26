@@ -14,10 +14,10 @@ namespace EcommerceTests.Infrastructure.Pages
         private readonly By _logoutLink           = By.XPath("//a[@class='ico-logout']");
         private readonly By _loginLink            = By.XPath("//a[@class='ico-login']");
         private readonly By _registerLink         = By.XPath("//a[@class='ico-register']");
-        private readonly By _shoppingCartLink     = By.XPath("//a[@class='ico-cart']");
+        private readonly By _shoppingCartLink     = By.XPath("//a[contains(@class,'ico-cart')]");
         private readonly By _cartQtyBadge         = By.XPath("//span[@class='cart-qty']");
         private readonly By _searchBox            = By.XPath("//input[@id='small-searchterms']");
-        private readonly By _searchButton         = By.XPath("//button[@class='button-1 search-box-button']");
+        private readonly By _searchButton         = By.XPath("//button[contains(@class,'search-box-button')]");
 
         public HeaderPage(IWebDriver driver) : base(driver) { }
 
